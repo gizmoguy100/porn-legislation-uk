@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Age Check That Isn’t — style specimen</title>
+<meta name="description" content="A style specimen for a diagnostic report on the UK Online Safety Act 2023 age-verification regime.">
+<link rel="stylesheet" href="../docs/assets/css/report.css">
+</head>
+<body id="top">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Inline icon sprite. Feather-style strokes; no external loads. -->
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-scale" viewBox="0 0 24 24">
+    <path d="M12 3v18"></path><path d="M5 7h14"></path>
+    <path d="M5 7l-3 7a3 3 0 0 0 6 0z"></path><path d="M19 7l3 7a3 3 0 0 1-6 0z"></path>
+    <path d="M8 21h8"></path>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+  </symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24">
+    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+    <line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line>
+  </symbol>
+  <symbol id="i-file" viewBox="0 0 24 24">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+    <polyline points="14 2 14 8 20 8"></polyline>
+    <line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+  </symbol>
+  <symbol id="i-dollar" viewBox="0 0 24 24">
+    <line x1="12" y1="1" x2="12" y2="23"></line>
+    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+  </symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+  </symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24">
+    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24">
+    <line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline>
+  </symbol>
+</svg>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="wordmark" href="#top"><span class="wordmark-mark">§</span> Legislation / Research</a>
+    <div class="topbar-right">
+      <span class="badge">Style demo</span>
+      <a class="topbar-link" href="#register">Vulnerability register</a>
+    </div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker"><svg class="icon" aria-hidden="true"><use href="#i-scale"></use></svg> Policy report · Online Safety Act 2023</p>
+    <h1>The Age Check That Isn’t</h1>
+    <p class="deck">Britain made porn sites verify their visitors’ ages. The statute is broad, the regulator is busy, and the money is not arriving. A diagnostic map of where the regime leaks.</p>
+    <div class="meta-row">
+      <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> 3 November 2026</span>
+      <span><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg> 18 min read</span>
+      <span><svg class="icon" aria-hidden="true"><use href="#i-scale"></use></svg> Diagnostic report</span>
+      <span class="meta-note">Figures current to 2 Nov 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc" aria-label="Contents">
+    <p class="toc-title">Contents</p>
+    <ol>
+      <li><a href="#findings" class="is-active">Key findings</a></li>
+      <li><a href="#duty">The duty</a></li>
+      <li><a href="#enforcement">Enforcement</a></li>
+      <li><a href="#search">The search hole</a></li>
+      <li><a href="#case-4chan">4chan case study</a></li>
+      <li><a href="#register">Vulnerability register</a></li>
+    </ol>
+    <p class="toc-note">A style specimen for a longer diagnostic report. Not the final text.</p>
+  </aside>
+
+  <main id="main">
+    <article>
+
+      <section id="findings">
+        <p class="section-label">01 · Key findings</p>
+        <h2>Four numbers, one problem</h2>
+        <p class="lede">The Online Safety Act did not ban pornography. It built a gate. The gate is real — the top ten UK porn sites now ask for age. But a gate is only as strong as its hinges, and in 2026 four of them are failing at once.</p>
+
+        <div class="stat-grid">
+          <div class="stat stat--accent">
+            <svg class="icon stat-icon" aria-hidden="true"><use href="#i-dollar"></use></svg>
+            <div class="stat-value">9 / 11</div>
+            <div class="stat-label">online-safety fines still unpaid, October 2026</div>
+            <div class="stat-source">Ofcom to DCMS Committee</div>
+          </div>
+          <div class="stat">
+            <svg class="icon stat-icon" aria-hidden="true"><use href="#i-search"></use></svg>
+            <div class="stat-value">33%</div>
+            <div class="stat-label">of first-page Google results for porn led to sites with no age check</div>
+            <div class="stat-source">Ofcom, July 2026</div>
+          </div>
+          <div class="stat">
+            <svg class="icon stat-icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+            <div class="stat-value">64 / 100</div>
+            <div class="stat-label">top UK porn sites with age assurance, June 2026</div>
+            <div class="stat-source">Ofcom, July 2026</div>
+          </div>
+          <div class="stat">
+            <svg class="icon stat-icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+            <div class="stat-value">£135k</div>
+            <div class="stat-label">paid against more than £7m in fines</div>
+            <div class="stat-source">Ofcom evidence, Oct 2026</div>
+          </div>
+        </div>
+
+        <p>Those numbers describe the same problem from different angles. The duty is on the books. The regulator is active. The top of the market has moved. But the tail has not, the discovery layer has not, and the money has not.</p>
+        <p>This report is diagnostic. It does not propose a fix. It maps the places where the regime’s reach exceeds its grip.</p>
+      </section>
+
+      <section id="duty">
+        <p class="section-label">02 · The duty</p>
+        <h2>A single sentence, doing a lot of work</h2>
+        <p>Part 5 of the <a href="https://www.legislation.gov.uk/ukpga/2023/50/part/5">Online Safety Act 2023</a> applies to an internet service if three conditions are met. It must publish or display “regulated provider pornographic content”; it must not be exempt; and it must have links with the UK. If all three hold, s 81 imposes the duty.</p>
+
+        <div class="gate" aria-label="The Part 5 gateway">
+          <div class="gate-step">
+            <span class="gate-num">01</span>
+            <strong>Regulated provider porn</strong>
+            <small>s 79</small>
+          </div>
+          <div class="gate-arrow" aria-hidden="true">→</div>
+          <div class="gate-step">
+            <span class="gate-num">02</span>
+            <strong>Not exempt</strong>
+            <small>Sch 1 / Sch 9</small>
+          </div>
+          <div class="gate-arrow" aria-hidden="true">→</div>
+          <div class="gate-step">
+            <span class="gate-num">03</span>
+            <strong>Has UK links</strong>
+            <small>s 80(4)</small>
+          </div>
+          <div class="gate-arrow" aria-hidden="true">→</div>
+          <div class="gate-step">
+            <span class="gate-num">04</span>
+            <strong>s 81 age-assurance duty</strong>
+            <small>HEAA</small>
+          </div>
+        </div>
+
+        <div class="statute">
+          <span class="statute-label">Online Safety Act 2023, s 81(2)–(3)</span>
+          <p>A duty to ensure, by the use of age verification or age estimation (or both), that children are not normally able to encounter content that is regulated provider pornographic content in relation to the service.</p>
+          <p>The age verification or age estimation must be of such a kind, and used in such a way, that it is <em>highly effective</em> at correctly determining whether or not a particular user is a child.</p>
+        </div>
+
+        <p>The duty is not a ban. It is an outcome: children not “normally” able to encounter the content. Neither “normally” nor “highly effective” is defined in the statute. Ofcom supplies four criteria — technically accurate, robust, reliable, fair — but they are guidance, not law, and they carry no numeric threshold.</p>
+        <p>That is the first vulnerability, and it is structural. The Act delegates the hardest question — what counts as effective — to a regulator, which in turn delegates it to providers, which choose their own methods.</p>
+      </section>
+
+      <section id="enforcement">
+        <p class="section-label">03 · Enforcement</p>
+        <h2>The fines are real. The collection is not.</h2>
+        <p>Ofcom has issued 31 fines against 11 providers, totalling more than £7m. Only two providers have paid — about £135,000, or roughly 1.9 per cent of the nominal total. The rest is in dispute, in appeal, or simply unpaid.</p>
+
+        <figure class="figure">
+          <div class="figure-head">
+            <span class="fig-label">Figure 1</span>
+            <span class="fig-title">Fixed penalties, selected providers</span>
+          </div>
+          <div class="figure-scroll">
+          <svg viewBox="0 0 720 390" role="img" aria-labelledby="fig-fines-title fig-fines-desc">
+            <title id="fig-fines-title">Fixed penalties against selected adult-service providers</title>
+            <desc id="fig-fines-desc">Horizontal bar chart. 8579 LLC, 1.40 million pounds, unpaid. AVS Group, 1.05 million, unpaid. Kick Online, 0.83 million, unpaid. Fapello, 0.63 million, unpaid. Youngtek, 0.60 million, unpaid. 4chan, 0.54 million, unpaid. First Time Videos, 0.08 million, paid. Itai Tech, 0.055 million, paid.</desc>
+
+            <g>
+              <rect x="0" y="0" width="10" height="10" rx="2" class="swatch-unpaid"></rect>
+              <text x="16" y="9" class="chart-legend">Unpaid</text>
+              <rect x="86" y="0" width="10" height="10" rx="2" class="swatch-paid"></rect>
+              <text x="102" y="9" class="chart-legend">Paid</text>
+              <text x="720" y="9" text-anchor="end" class="chart-note">£ MILLION, FIXED PENALTIES</text>
+            </g>
+
+            <line x1="170" y1="30" x2="170" y2="322" class="axis-line"></line>
+            <line x1="345" y1="30" x2="345" y2="322" class="grid-line"></line>
+            <line x1="520" y1="30" x2="520" y2="322" class="grid-line"></line>
+
+            <g>
+              <text x="160" y="57" text-anchor="end" class="chart-label">8579 LLC</text>
+              <rect x="170" y="42" width="490" height="20" rx="3" class="bar-unpaid"></rect>
+              <text x="668" y="57" class="chart-value">1.40</text>
+            </g>
+            <g>
+              <text x="160" y="93" text-anchor="end" class="chart-label">AVS Group</text>
+              <rect x="170" y="78" width="367.5" height="20" rx="3" class="bar-unpaid"></rect>
+              <text x="545.5" y="93" class="chart-value">1.05</text>
+            </g>
+            <g>
+              <text x="160" y="129" text-anchor="end" class="chart-label">Kick Online</text>
+              <rect x="170" y="114" width="290.5" height="20" rx="3" class="bar-unpaid"></rect>
+              <text x="468.5" y="129" class="chart-value">0.83</text>
+            </g>
+            <g>
+              <text x="160" y="165" text-anchor="end" class="chart-label">Fapello</text>
+              <rect x="170" y="150" width="220.5" height="20" rx="3" class="bar-unpaid"></rect>
+              <text x="398.5" y="165" class="chart-value">0.63</text>
+            </g>
+            <g>
+              <text x="160" y="201" text-anchor="end" class="chart-label">Youngtek</text>
+              <rect x="170" y="186" width="210" height="20" rx="3" class="bar-unpaid"></rect>
+              <text x="388" y="201" class="chart-value">0.60</text>
+            </g>
+            <g>
+              <text x="160" y="237" text-anchor="end" class="chart-label">4chan</text>
+              <rect x="170" y="222" width="189" height="20" rx="3" class="bar-unpaid"></rect>
+              <text x="367" y="237" class="chart-value">0.54</text>
+            </g>
+            <g>
+              <text x="160" y="273" text-anchor="end" class="chart-label">First Time Videos</text>
+              <rect x="170" y="258" width="28" height="20" rx="3" class="bar-paid"></rect>
+              <text x="206" y="273" class="chart-value">0.08</text>
+            </g>
+            <g>
+              <text x="160" y="309" text-anchor="end" class="chart-label">Itai Tech</text>
+              <rect x="170" y="294" width="19.25" height="20" rx="3" class="bar-paid"></rect>
+              <text x="197.25" y="309" class="chart-value">0.055</text>
+            </g>
+
+            <text x="0" y="352" class="chart-note">SOURCE: OFCOM CONFIRMATION DECISIONS, 2025–26 · SELECTED PROVIDERS, NOT EXHAUSTIVE</text>
+          </svg>
+          </div>
+          <figcaption><strong>Only two of the eight providers shown have paid.</strong> Youngtek is appealing to the Upper Tribunal. 4chan has no UK assets. The chart shows fixed penalties; daily penalties and interest are excluded.</figcaption>
+        </figure>
+
+        <div class="callout">
+          <p class="callout-label"><svg class="icon" aria-hidden="true"><use href="#i-alert"></use></svg> The regulator’s own words</p>
+          <p>“We will not be able to recover every single fine… If foreign courts decide to try to get in our way, there will be a point at which we have to accept that we will not be able to recover that money.”</p>
+          <p class="small">Dame Melanie Dawes, Ofcom chief executive, to the DCMS Committee, 20 October 2026.</p>
+        </div>
+
+        <p>Geo-blocking has become the functional equivalent of compliance. Ofcom counts a UK block as a mitigation; in its July 2026 scorecard, 10 of the top 100 services had blocked the UK, 64 had age assurance, and 26 had neither. A block is not an age check. It is an exit — and a VPN walks around it.</p>
+
+        <figure class="figure">
+          <div class="figure-head">
+            <span class="fig-label">Figure 2</span>
+            <span class="fig-title">The top 100, by protection status</span>
+          </div>
+          <div class="figure-scroll">
+          <svg viewBox="0 0 720 150" role="img" aria-labelledby="fig-top100-title fig-top100-desc">
+            <title id="fig-top100-title">Status of the top 100 UK pornography services, June 2026</title>
+            <desc id="fig-top100-desc">64 had age assurance, 10 geo-blocked the UK, and 26 had neither.</desc>
+            <text x="0" y="12" class="chart-note">TOP 100 UK PORNOGRAPHY SERVICES · JUNE 2026</text>
+            <g transform="translate(0,28)">
+              <rect x="0" y="0" width="460.8" height="44" class="seg-assured"></rect>
+              <rect x="460.8" y="0" width="72" height="44" class="seg-geo"></rect>
+              <rect x="532.8" y="0" width="187.2" height="44" class="seg-none"></rect>
+              <text x="230.4" y="28" text-anchor="middle" class="seg-label">64</text>
+              <text x="496.8" y="28" text-anchor="middle" class="seg-label-dark">10</text>
+              <text x="626.4" y="28" text-anchor="middle" class="seg-label">26</text>
+            </g>
+            <g transform="translate(0,100)">
+              <rect x="0" y="0" width="10" height="10" rx="2" class="swatch-assured"></rect>
+              <text x="16" y="9" class="chart-legend">Age assurance</text>
+              <rect x="150" y="0" width="10" height="10" rx="2" class="swatch-geo"></rect>
+              <text x="166" y="9" class="chart-legend">UK geo-block</text>
+              <rect x="290" y="0" width="10" height="10" rx="2" class="swatch-none"></rect>
+              <text x="306" y="9" class="chart-legend">Neither</text>
+            </g>
+          </svg>
+          </div>
+          <figcaption><strong>Roughly a quarter of the top 100 had neither an age check nor a UK block.</strong> Ofcom treats a geo-block as a mitigation, not as an age-assurance measure. Source: Ofcom, July 2026.</figcaption>
+        </figure>
+      </section>
+
+      <section id="search">
+        <p class="section-label">04 · The search hole</p>
+        <h2>The discovery layer is outside the duty</h2>
+        <p>The clearest statutory gap is not in enforcement. It is in the definition. Section 79(6)(b) says porn that “appears in search results” is not “published or displayed” by the search service. Search engines are therefore not Part 5 porn publishers, however prominently they surface the content.</p>
+        <p>They are regulated search services under Part 3, with duties to minimise the risk of children encountering primary priority content. But that is a different, softer standard. Ofcom’s own report says the quiet part out loud.</p>
+
+        <div class="pullquote">
+          <p>Search services are not required under the Act to use highly effective age assurance to prevent access to pornographic content by children.</p>
+          <cite>Ofcom, Use of Age Assurance Report 2026, note 9</cite>
+        </div>
+
+        <figure class="figure">
+          <div class="figure-head">
+            <span class="fig-label">Figure 3</span>
+            <span class="fig-title">First-page results to sites without protections</span>
+          </div>
+          <div class="figure-scroll">
+          <svg viewBox="0 0 720 170" role="img" aria-labelledby="fig-search-title fig-search-desc">
+            <title id="fig-search-title">Share of first-page search results linking to unprotected porn sites</title>
+            <desc id="fig-search-desc">Google, 33 percent. Bing, 54 percent.</desc>
+            <text x="0" y="12" class="chart-note">FIRST-PAGE RESULTS TO SITES WITHOUT PROTECTIONS · MAY 2026</text>
+            <g transform="translate(0,34)">
+              <text x="0" y="17" class="chart-label">Google</text>
+              <rect x="90" y="2" width="178.2" height="22" rx="3" class="bar-clay"></rect>
+              <text x="276.2" y="18" class="chart-value">33%</text>
+              <text x="0" y="63" class="chart-label">Bing</text>
+              <rect x="90" y="48" width="291.6" height="22" rx="3" class="bar-clay"></rect>
+              <text x="389.6" y="64" class="chart-value">54%</text>
+            </g>
+            <line x1="90" y1="120" x2="630" y2="120" class="axis-line"></line>
+            <line x1="225" y1="28" x2="225" y2="120" class="grid-line"></line>
+            <line x1="360" y1="28" x2="360" y2="120" class="grid-line"></line>
+            <line x1="495" y1="28" x2="495" y2="120" class="grid-line"></line>
+            <text x="90" y="140" class="chart-note">0</text>
+            <text x="225" y="140" text-anchor="middle" class="chart-note">25</text>
+            <text x="360" y="140" text-anchor="middle" class="chart-note">50</text>
+            <text x="495" y="140" text-anchor="middle" class="chart-note">75</text>
+            <text x="630" y="140" text-anchor="end" class="chart-note">100%</text>
+          </svg>
+          </div>
+          <figcaption><strong>Bing was worse than Google, but neither was close to zero.</strong> Ofcom replicated the experience of logged-out users. Source: Ofcom, Use of Age Assurance Report 2026, para 4.32.</figcaption>
+        </figure>
+
+        <p>The practical effect is a conveyor belt. In Ofcom’s study, 62 per cent of children who visited porn used a search engine immediately beforehand. The destination sites face the hard duty; the discovery layer does not.</p>
+      </section>
+
+      <section id="case-4chan">
+        <p class="section-label">05 · Case study</p>
+        <h2>4chan: two events, one ruling</h2>
+        <p>“The 4chan ruling” is usually compressed into a single story. It is two events on two continents, and only one is a ruling.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <p class="timeline-date">10 June 2025</p>
+            <p class="timeline-title">Ofcom opens the investigation</p>
+            <p class="timeline-text">Case CW/01307/06/25, covering information notices, the illegal-content risk assessment and the age-assurance duty.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-date">13 October 2025</p>
+            <p class="timeline-title">£20,000 for information-notice breaches</p>
+            <p class="timeline-text">4chan failed to supply its risk-assessment record and qualifying worldwide revenue data.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-date">19 March 2026</p>
+            <p class="timeline-title">£520,000 in fixed penalties</p>
+            <p class="timeline-text">£450,000 for the s 12 age-assurance failure, £50,000 for the risk assessment, £20,000 for the terms of service. Compliance deadline: 2 April 2026.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-date">15 September 2026</p>
+            <p class="timeline-title">The US court dismisses 4chan and Kiwi Farms’ suit</p>
+            <p class="timeline-text">The D.D.C. holds that Ofcom is a “foreign state” under the FSIA. The merits are never reached.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-date">20 October 2026</p>
+            <p class="timeline-title">Ofcom tells MPs the money is not arriving</p>
+            <p class="timeline-text">Nine of 11 online-safety fines remain unpaid; four providers have geo-blocked the UK; three services remain available.</p>
+          </div>
+        </div>
+
+        <p>Ofcom’s decision is an administrative finding. The US judgment is a jurisdictional dismissal. The court did not uphold the fines, and it did not strike them down. It held that Ofcom is a foreign state under the Foreign Sovereign Immunities Act, so the suit could not proceed in Washington. The merits were never reached.</p>
+
+        <div class="callout callout--dark">
+          <p class="callout-label"><svg class="icon" aria-hidden="true"><use href="#i-scale"></use></svg> What the court actually said</p>
+          <p>“Plaintiffs’ suit fails because they seek to use American courts as a sword against Ofcom rather than as a shield to protect themselves.”</p>
+          <p class="small">Judge Rudolph Contreras, D.D.C., 15 September 2026.</p>
+        </div>
+
+        <p>The obligation layer survived. The collection layer did not. 4chan has no UK staff, servers or assets; nothing has been paid. The only realistic UK lever is a geo-block, which secures neither payment nor an age check.</p>
+      </section>
+
+      <section id="register">
+        <p class="section-label">06 · Register</p>
+        <h2>Where the statute leaks</h2>
+        <p>Severity is an editorial judgement, not a statutory classification. The evidence column is the part that matters.</p>
+
+        <div class="table-wrap">
+          <table class="register">
+            <thead>
+              <tr>
+                <th scope="col">Vulnerability</th>
+                <th scope="col">Provision</th>
+                <th scope="col">Severity</th>
+                <th scope="col">Evidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="reg-name">Search results excluded</span></td>
+                <td><span class="reg-prov">s 79(6)(b)</span></td>
+                <td><span class="chip chip--high">High</span></td>
+                <td>33% of Google and 54% of Bing first-page results led to unprotected sites (Ofcom, July 2026).</td>
+              </tr>
+              <tr>
+                <td><span class="reg-name">UGC carve-out</span></td>
+                <td><span class="reg-prov">s 79(7)</span></td>
+                <td><span class="chip chip--high">High</span></td>
+                <td>Tube, cam and fan sites fall under Part 3, with a later timetable and a softer standard.</td>
+              </tr>
+              <tr>
+                <td><span class="reg-name">“Significant number” undefined</span></td>
+                <td><span class="reg-prov">s 80(4)</span></td>
+                <td><span class="chip chip--high">High</span></td>
+                <td>Providers self-assess scope; Ofcom has never published a numeric threshold.</td>
+              </tr>
+              <tr>
+                <td><span class="reg-name">“Normally” / “highly effective”</span></td>
+                <td><span class="reg-prov">s 81(2)–(3)</span></td>
+                <td><span class="chip chip--high">High</span></td>
+                <td>No metric in statute; the four criteria are guidance only; no enforcement for circumvention.</td>
+              </tr>
+              <tr>
+                <td><span class="reg-name">Fines uncollectable</span></td>
+                <td><span class="reg-prov">Sch 13</span></td>
+                <td><span class="chip chip--high">High</span></td>
+                <td>9 of 11 unpaid; 4 geo-blocked; 3 still available (October 2026).</td>
+              </tr>
+              <tr>
+                <td><span class="reg-name">Identity binding</span></td>
+                <td><span class="reg-prov">s 81(2)</span></td>
+                <td><span class="chip chip--high">High</span></td>
+                <td>The check verifies that someone is 18, not that the current user is that person.</td>
+              </tr>
+              <tr>
+                <td><span class="reg-name">Privacy duty is procedural</span></td>
+                <td><span class="reg-prov">s 81(4)(b)</span></td>
+                <td><span class="chip chip--med">Medium</span></td>
+                <td>“Have regard” only; no minimisation, retention or security standard.</td>
+              </tr>
+              <tr>
+                <td><span class="reg-name">App stores and devices outside</span></td>
+                <td><span class="reg-prov">—</span></td>
+                <td><span class="chip chip--med">Medium</span></td>
+                <td>Ofcom says app stores “could do more”; they are not regulated services.</td>
+              </tr>
+              <tr>
+                <td><span class="reg-name">AI companions and nudify tools</span></td>
+                <td><span class="reg-prov">s 79(2)</span></td>
+                <td><span class="chip chip--med">Medium</span></td>
+                <td>163 of 181 nudify sites were accessible from the UK; only 2 had age verification (ISD).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="small">A longer register — including the on-demand programme service carve-out, the text-only exclusion and the “acting on behalf of” boundary — will sit in the appendix of the final report.</p>
+      </section>
+
+    </article>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-kicker">Methodology</p>
+      <h2>About this demonstration</h2>
+      <p>This is a short style specimen for a longer diagnostic report. Figures are drawn from Ofcom decisions and reports, the D.D.C. opinion, GOV.UK and NGO research, current to 2 November 2026.</p>
+      <p>The final report will carry full citations. This page is not legal advice.</p>
+    </div>
+    <div>
+      <p class="footer-kicker">Primary sources</p>
+      <p>
+        <a href="https://www.legislation.gov.uk/ukpga/2023/50/part/5">Online Safety Act 2023, Part 5</a><br>
+        <a href="https://www.ofcom.org.uk/online-safety/protecting-children/use-of-age-assurance-report-2026">Ofcom, Use of Age Assurance Report 2026</a><br>
+        <a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/4chan-fined-450000-for-not-protecting-children-from-online-pornography">Ofcom, 4chan decision</a><br>
+        <a href="https://www.courtlistener.com/docket/71209929/4chan-community-support-llc-v-uk-office-of-communications/">D.D.C. opinion (CourtListener)</a>
+      </p>
+      <p class="footer-note">Set in Lora and Poppins where installed; Georgia and the system sans otherwise. No external assets.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+    var sections = links.map(function (link) {
+      return document.querySelector(link.getAttribute('href'));
+    }).filter(Boolean);
+    if (!sections.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (link) {
+          link.classList.toggle('is-active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-18% 0px -68% 0px', threshold: 0 });
+
+    sections.forEach(function (section) { observer.observe(section); });
+  })();
+</script>
+
+</body>
+</html>

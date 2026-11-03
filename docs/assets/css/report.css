@@ -1285,6 +1285,171 @@ tbody tr:hover {
   }
 }
 
+/* ---------- AI slop warning modal ---------- */
+
+.slop-modal[hidden] {
+  display: none;
+}
+
+.slop-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+}
+
+.slop-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 19, 0.66);
+  backdrop-filter: blur(5px);
+}
+
+.slop-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 640px);
+  max-height: min(92vh, 760px);
+  overflow-y: auto;
+  padding: 2rem 2rem 1.6rem;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  border-top: 6px solid var(--clay);
+  border-radius: 14px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+}
+
+.slop-modal__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid var(--hairline);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.slop-modal__close:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.slop-modal__kicker {
+  margin: 0 0 0.7rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay-deep);
+}
+
+.slop-modal__title {
+  margin: 0 0 1rem;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--clay-deep);
+}
+
+.slop-modal__lede {
+  margin: 0 0 1rem;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.slop-modal__body {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.slop-modal__body p {
+  margin: 0 0 0.8rem;
+}
+
+.slop-modal__body ul {
+  margin: 0 0 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.slop-modal__body li {
+  margin-bottom: 0.4rem;
+}
+
+.slop-modal__body a {
+  color: var(--clay-deep);
+}
+
+.slop-modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem 1.2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.slop-modal__button {
+  appearance: none;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.slop-modal__button:hover {
+  border-color: var(--clay-deep);
+  background: var(--clay-deep);
+}
+
+.slop-modal__hint {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  color: var(--faint);
+}
+
+.slop-modal__button:focus-visible,
+.slop-modal__close:focus-visible {
+  outline: 2px solid var(--clay-deep);
+  outline-offset: 3px;
+}
+
+body.slop-open {
+  overflow: hidden;
+}
+
+@media (max-width: 560px) {
+  .slop-modal {
+    padding: 0.75rem;
+  }
+
+  .slop-modal__panel {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  .slop-modal__title {
+    font-size: 2rem;
+  }
+}
+
 /* ---------- Print ---------- */
 
 @media print {
@@ -1305,6 +1470,7 @@ tbody tr:hover {
   .topbar,
   .toc,
   .skip,
+  .slop-modal,
   .no-print {
     display: none !important;
   }
